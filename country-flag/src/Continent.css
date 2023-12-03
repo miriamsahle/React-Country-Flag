@@ -1,0 +1,93 @@
+/* Container for the header, dropdown, and button */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style the header */
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #363535;
+}
+
+/* Style the dropdown */
+#continents {
+  padding: 8px;
+  font-size: 16px;
+  width: 150px;
+  border-radius: 5px;
+  margin-top: 20px;
+  margin-right: 20px; /* Add spacing between dropdown and button */
+}
+
+/* Style the button */
+button {
+  padding: 8px 20px;
+  font-size: 16px;
+  width: 150px;
+  border: 1px solid #6c6c6c;
+  border-radius: 5px;
+  background-color: #ffff;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e4e1e5;
+}
+
+/* Style the countries container */
+div > div.countries {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 50px;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* Style the individual country card */
+div > div.countries > div {
+  display: block;
+  position: relative;
+  max-width: 150px;
+  padding: 10px;
+  margin: 12px;
+  z-index: 0;
+  overflow: hidden;
+
+  &:hover {
+    transition: all 0.2s ease-out;
+    box-shadow: 0px 4px 8px rgba(38, 38, 38, 0.2);
+    top: -4px;
+    background-color: white;
+  }
+}
+
+div > div.countries > div img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border: 2px solid #787575;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+div > div.countries > div p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 15px;
+}
+
+div > div.countries > div > div.countries-p {
+  border: 1px solid #787575;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+}
